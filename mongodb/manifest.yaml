@@ -36,3 +36,20 @@ spec:
             port: 27017
           initialDelaySeconds: 5
           periodSeconds: 5
+#--------------------------------------------------
+    #need to create service for mongodb 
+---
+apiVersion: v1
+kind: service
+metadata:
+  name: mongodb
+  namespace: roboshop
+spec:
+  selector:
+    project: roboshop
+    component: mongodb
+    tier: db
+  port:
+  - protocal: TCP 
+    port: 27017 #service port
+    targetPort: 27017 #container port
