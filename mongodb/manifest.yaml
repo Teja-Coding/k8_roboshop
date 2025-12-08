@@ -24,3 +24,14 @@ spec:
       containers:
       - name: mongodb
         image: joindevops/mongodb:v1
+    readinessProbe:
+      tcpSocket:
+        port: 8080
+      initialDelaySeconds: 15
+      periodSeconds: 10
+    livenessProbe:
+      tcpSocket:
+        port: 8080
+      initialDelaySeconds: 15
+      periodSeconds: 10
+          
