@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: joindevops/frontend:v1
+        image: tejahere/frontend:v1
         imagePullPolicy: Always
         # envFrom:
         # - configMapRef:
