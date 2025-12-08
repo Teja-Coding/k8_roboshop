@@ -40,7 +40,7 @@ spec:
     #need to create service for mongodb 
 ---
 apiVersion: v1
-kind: service
+kind: Service
 metadata:
   name: mongodb
   namespace: roboshop
