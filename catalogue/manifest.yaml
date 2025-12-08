@@ -35,7 +35,7 @@ spec:
         image: joindevops/catalogue:v1
         imagePullPolicy: Always
         envFrom:
-        - ConfigMapRef:
+        - configMapRef:
           name: catalogue
         ports:
         - name: liveness-port
@@ -52,8 +52,7 @@ spec:
             port: liveness-port
           failureThreshold: 1
           periodSeconds: 15
-#--------------------------------------------------
-    #need to create service for catalogue 
+
 ---
 apiVersion: v1
 kind: Service
