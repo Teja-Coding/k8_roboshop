@@ -39,10 +39,6 @@ spec:
             port: liveness-port
           failureThreshold: 1
           periodSeconds: 15
-
-
-
-
 #--------------------------------------------------
     #need to create service for catalogue 
 ---
@@ -58,5 +54,5 @@ spec:
     tier: backend
   ports:
   - protocol: TCP 
-    port: 27017 #service port
-    targetPort: 27017 #container port
+    port: 8080 #service port
+    targetPort: 8080 #container port
